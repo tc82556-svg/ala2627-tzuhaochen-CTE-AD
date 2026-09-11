@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ten small experiments in expressive HTML, CSS, and JavaScript motion.">
+  <title>Motion Studies / 10 small experiments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+  <header class="masthead">
+    <a class="wordmark" href="#top" aria-label="Motion Studies home"><span class="wordmark-mark">/</span>motion
+      studies</a>
+    <div class="masthead-meta"><span class="status-dot"></span> interactive archive <span class="meta-slash">//</span>
+      2026</div>
+  </header>
+
+  <main id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-kicker"><span>01—10</span><span>HTML / CSS / JS</span></div>
+      <h1 id="page-title">Small moves.<br><em>Big personality.</em></h1>
+      <p class="intro-copy">A pocket-sized field guide to making interfaces feel alive. Hover, click, drag, and linger.
+      </p>
+      <a class="scroll-cue" href="#experiments"><span class="scroll-line"></span> explore the studies</a>
+    </section>
+
+    <section class="experiment-grid" id="experiments" aria-label="Interactive motion studies">
+      <article class="study study-wide study-cursor" data-number="01">
+        <div class="study-heading"><span>01 / CSS variables</span><span>move cursor</span></div>
+        <div class="cursor-stage" id="cursor-stage">
+          <div class="cursor-copy"><span>find</span><strong>the light</strong><span>inside the interface</span></div>
+          <div class="cursor-crosshair" aria-hidden="true"></div>
+        </div>
+        <p class="study-caption">Cursor spotlight</p>
+      </article>
+
+      <article class="study study-yellow" data-number="02">
+        <div class="study-heading"><span>02 / transforms</span><span>hover card</span></div>
+        <div class="tilt-wrap">
+          <div class="tilt-card" id="tilt-card"><span
+              class="tilt-orbit">08°</span><strong>weightless<br>object</strong><span class="tilt-foot">perspective:
+              900px</span></div>
+        </div>
+        <p class="study-caption">3D tilt</p>
+      </article>
+
+      <article class="study study-cobalt" data-number="03">
+        <div class="study-heading"><span>03 / spring physics</span><span>press + release</span></div>
+        <div class="spring-stage"><button class="spring-button" id="spring-button" type="button"><span
+              class="spring-icon">+</span><span>make a ripple</span></button>
+          <div class="spring-ring"></div>
+        </div>
+        <p class="study-caption">Spring button</p>
+      </article>
+
+      <article class="study study-dark" data-number="04">
+        <div class="study-heading"><span>04 / keyframes</span><span>auto loop</span></div>
+        <div class="marquee-stage">
+          <div class="marquee-track"><span>keep it moving</span><span aria-hidden="true">✳</span><span>keep it
+              moving</span><span aria-hidden="true">✳</span></div>
+        </div>
+        <p class="study-caption">Endless marquee</p>
+      </article>
+
+      <article class="study study-wide study-type" data-number="05">
+        <div class="study-heading"><span>05 / text animation</span><span>press the word</span></div>
+        <button class="kinetic-word" id="kinetic-word" type="button">unfold<span
+            class="kinetic-underline"></span></button>
+        <p class="study-caption">Kinetic type</p>
+      </article>
+
+      <article class="study study-coral" data-number="06">
+        <div class="study-heading"><span>06 / pointer events</span><span>drag me</span></div>
+        <div class="drag-stage" id="drag-stage">
+          <div class="drag-orb" id="drag-orb"><span>grab</span></div><span class="drag-label">x <b id="drag-x">50</b> /
+            y <b id="drag-y">50</b></span>
+        </div>
+        <p class="study-caption">Drag physics</p>
+      </article>
+
+      <article class="study study-lilac" data-number="07">
+        <div class="study-heading"><span>07 / clip-path</span><span>click switch</span></div>
+        <button class="reveal-door" id="reveal-door" type="button"><span class="door-top">closed loop</span><span
+            class="door-bottom">new idea →</span><span class="door-label">open</span></button>
+        <p class="study-caption">Reveal transition</p>
+      </article>
+
+      <article class="study study-wide study-grid" data-number="08">
+        <div class="study-heading"><span>08 / staggered delay</span><span>hover field</span></div>
+        <div class="dot-field" id="dot-field" aria-label="Animated dot field"></div>
+        <p class="study-caption">Staggered grid</p>
+      </article>
+
+      <article class="study study-green" data-number="09">
+        <div class="study-heading"><span>09 / filter</span><span>click the dial</span></div>
+        <button class="dial" id="dial" type="button" aria-label="Change color filter"><span
+            class="dial-knob"></span><span class="dial-number">01</span></button>
+        <p class="study-caption">Color dial</p>
+      </article>
+
+      <article class="study study-black" data-number="10">
+        <div class="study-heading"><span>10 / intersection observer</span><span>scroll into view</span></div>
+        <div class="observer-stage">
+          <div class="observer-shape"><span>10</span></div><span class="observer-line"></span>
+        </div>
+        <p class="study-caption">Scroll reveal</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer"><span>made with curiosity</span><span>ten tiny pieces of motion</span></footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
