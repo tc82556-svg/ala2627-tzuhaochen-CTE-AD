@@ -1,3 +1,5 @@
+console.log("Hello from my site");
+
 const cursorStage = document.querySelector('#cursor-stage');
 cursorStage.addEventListener('pointermove', (event) => {
   const bounds = cursorStage.getBoundingClientRect();
