@@ -55,6 +55,24 @@
         <button class="fill-button" type="button" data-fill="100" aria-pressed="true">100%</button>
       </div>
       <p class="fill-status" aria-live="polite">Filled: 100%</p>
+      <form class="response-form">
+        <label for="blank-answer">Fill in the blank</label>
+        <div class="response-row">
+          <input id="blank-answer" name="blank-answer" type="text" placeholder="Type your answer" required>
+          <button type="submit">Confirm</button>
+        </div>
+        <p class="response-status" aria-live="polite"></p>
+      </form>
+      <label class="answer-label" for="real-answer">Your answer</label>
+      <textarea id="real-answer" name="real-answer" rows="4" placeholder="Write a real answer here..."></textarea>
+      <div class="good-stuff">
+        <button class="good-stuff-button" type="button">{Good stuff}</button>
+        <div class="watch-confirmation" hidden>
+          <p>Confirm to watch?</p>
+          <button class="watch-choice" type="button" data-watch="yes">Yes</button>
+          <button class="watch-choice" type="button" data-watch="no">No</button>
+        </div>
+      </div>
     </section>
 
     <section>

@@ -132,6 +132,101 @@ a:hover {
   color: var(--muted);
 }
 
+.response-form {
+  margin-top: 1.5rem;
+}
+
+.response-form label,
+.answer-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.response-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.response-row input,
+textarea {
+  border: 1px solid var(--line);
+  border-radius: 0.25rem;
+  padding: 0.6rem 0.7rem;
+  color: var(--ink);
+  font: inherit;
+}
+
+.response-row input {
+  min-width: 0;
+  flex: 1;
+}
+
+.response-row button {
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--accent);
+  color: var(--paper);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.response-row input:focus-visible,
+.response-row button:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--line);
+  outline-offset: 3px;
+}
+
+.response-status {
+  min-height: 1.65em;
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+.answer-label {
+  margin-top: 1rem;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+}
+
+.good-stuff {
+  margin-top: 1rem;
+}
+
+.good-stuff-button,
+.watch-choice {
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--accent);
+  color: var(--paper);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.watch-confirmation p {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.watch-choice+.watch-choice {
+  margin-left: 0.5rem;
+}
+
+.good-stuff-button:focus-visible,
+.watch-choice:focus-visible {
+  outline: 3px solid var(--line);
+  outline-offset: 3px;
+}
+
 footer {
   margin-top: 3.5rem;
   padding-top: 1rem;
