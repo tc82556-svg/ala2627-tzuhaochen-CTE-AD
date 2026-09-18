@@ -12,6 +12,7 @@
   <meta name="description" content="One sentence about who you are and what you make.">
 
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -37,6 +38,19 @@
       <p>
         I'm learning how to avoid things like errors or bugs in my programs.
       </p>
+    </section>
+
+    <section>
+      <h2>Cuboid size</h2>
+      <div class="cuboid-viewport">
+        <div class="cuboid" role="img" aria-label="Cuboid, 2000 pixels long and 50 pixels wide"></div>
+      </div>
+      <div class="size-controls" aria-label="Choose cuboid size">
+        <button class="size-button" type="button" data-scale="20" aria-pressed="false">20%</button>
+        <button class="size-button" type="button" data-scale="60" aria-pressed="false">60%</button>
+        <button class="size-button" type="button" data-scale="100" aria-pressed="true">100%</button>
+      </div>
+      <p class="cuboid-status" aria-live="polite">Length: 2000 pixels | Width: 50 pixels</p>
     </section>
 
     <section>

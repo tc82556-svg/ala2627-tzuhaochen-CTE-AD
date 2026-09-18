@@ -7,17 +7,25 @@
 /* The custom properties. Change a colour ONCE here and it
    changes everywhere it is used further down. */
 :root {
-  --ink:        #1a1a1a;   /* body text */
-  --muted:      #5a6472;   /* quieter text */
-  --accent:     #0a6373;   /* links and rules — make this yours */
-  --paper:      #ffffff;
-  --line:       #e2e6ec;
-  --measure:    34rem;     /* how wide a line of text gets before it wraps */
+  --ink: #1a1a1a;
+  /* body text */
+  --muted: #5a6472;
+  /* quieter text */
+  --accent: #0a6373;
+  /* links and rules — make this yours */
+  --paper: #ffffff;
+  --line: #e2e6ec;
+  --measure: 34rem;
+  /* how wide a line of text gets before it wraps */
 }
 
 /* A sensible reset. Without border-box, padding makes boxes
    wider than you asked for, and nothing lines up. */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0 auto;
@@ -52,14 +60,67 @@ h2 {
   color: var(--accent);
 }
 
-ul { margin: 0; padding-left: 1.1rem; }
-li { margin-bottom: 0.6rem; }
+ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
 
 a {
   color: var(--accent);
   text-underline-offset: 3px;
 }
-a:hover { text-decoration: none; }
+
+a:hover {
+  text-decoration: none;
+}
+
+.cuboid-viewport {
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+
+.cuboid {
+  width: 2000px;
+  height: 50px;
+  border: 2px solid var(--ink);
+  background: var(--accent);
+}
+
+.size-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.size-button {
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--accent);
+  color: var(--paper);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.size-button[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.size-button:focus-visible {
+  outline: 3px solid var(--line);
+  outline-offset: 3px;
+}
+
+.cuboid-status {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+}
 
 footer {
   margin-top: 3.5rem;
@@ -72,6 +133,11 @@ footer {
 /* Someone reading this on a phone is the common case, not the
    edge case. Test it there before you call the page done. */
 @media (max-width: 30rem) {
-  body { padding-top: 2rem; }
-  h1   { font-size: 1.8rem; }
+  body {
+    padding-top: 2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
 }
