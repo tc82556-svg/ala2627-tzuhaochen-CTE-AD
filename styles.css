@@ -7,14 +7,14 @@
 /* The custom properties. Change a colour ONCE here and it
    changes everywhere it is used further down. */
 :root {
-  --ink: #1a1a1a;
+  --ink: #ffffff;
   /* body text */
-  --muted: #5a6472;
+  --muted: #d0d0d0;
   /* quieter text */
-  --accent: #0a6373;
+  --accent: #19a34a;
   /* links and rules — make this yours */
-  --paper: #ffffff;
-  --line: #e2e6ec;
+  --paper: #333333;
+  --line: #777777;
   --measure: 34rem;
   /* how wide a line of text gets before it wraps */
 }
@@ -33,7 +33,7 @@ body {
   max-width: var(--measure);
   background: var(--paper);
   color: var(--ink);
-  font: 1rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font: 1rem/1.65 "Times New Roman", Times, serif;
 }
 
 h1 {
@@ -95,7 +95,7 @@ a:hover {
 .square-fill {
   width: 100%;
   height: 100%;
-  background: var(--accent);
+  background: #ffff00;
   transition: height 200ms ease;
 }
 
@@ -118,8 +118,8 @@ a:hover {
 }
 
 .fill-button[aria-pressed="true"] {
-  background: var(--ink);
-  border-color: var(--ink);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .fill-button:focus-visible {
@@ -153,6 +153,7 @@ textarea {
   border: 1px solid var(--line);
   border-radius: 0.25rem;
   padding: 0.6rem 0.7rem;
+  background: var(--paper);
   color: var(--ink);
   font: inherit;
 }
