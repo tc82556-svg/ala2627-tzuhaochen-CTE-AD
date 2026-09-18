@@ -1,16 +1,17 @@
-const cuboid = document.querySelector('.cuboid');
-const cuboidStatus = document.querySelector('.cuboid-status');
-const sizeButtons = document.querySelectorAll('.size-button');
+const square = document.querySelector('.square');
+const squareFill = document.querySelector('.square-fill');
+const fillStatus = document.querySelector('.fill-status');
+const fillButtons = document.querySelectorAll('.fill-button');
 
-sizeButtons.forEach((button) => {
+fillButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    const scale = Number(button.dataset.scale);
-    const length = 2000 * scale / 100;
+    const fill = Number(button.dataset.fill);
 
-    cuboid.style.width = `${length}px`;
-    cuboidStatus.textContent = `Length: ${length} pixels | Width: 50 pixels`;
-    sizeButtons.forEach((sizeButton) => {
-      sizeButton.setAttribute('aria-pressed', String(sizeButton === button));
+    squareFill.style.height = `${fill}%`;
+    square.setAttribute('aria-label', `500 by 500 pixel square, ${fill} percent filled`);
+    fillStatus.textContent = `Filled: ${fill}%`;
+    fillButtons.forEach((fillButton) => {
+      fillButton.setAttribute('aria-pressed', String(fillButton === button));
     });
   });
 });

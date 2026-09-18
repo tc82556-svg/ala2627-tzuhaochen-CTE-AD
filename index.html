@@ -41,16 +41,20 @@
     </section>
 
     <section>
-      <h2>Cuboid size</h2>
-      <div class="cuboid-viewport">
-        <div class="cuboid" role="img" aria-label="Cuboid, 2000 pixels long and 50 pixels wide"></div>
+      <h2>Square fill</h2>
+      <div class="square-viewport">
+        <div class="square" role="img" aria-label="500 by 500 pixel square, 100 percent filled">
+          <div class="square-fill"></div>
+        </div>
       </div>
-      <div class="size-controls" aria-label="Choose cuboid size">
-        <button class="size-button" type="button" data-scale="20" aria-pressed="false">20%</button>
-        <button class="size-button" type="button" data-scale="60" aria-pressed="false">60%</button>
-        <button class="size-button" type="button" data-scale="100" aria-pressed="true">100%</button>
+      <div class="fill-controls" aria-label="Choose square fill amount">
+        <button class="fill-button" type="button" data-fill="0" aria-pressed="false">0%</button>
+        <button class="fill-button" type="button" data-fill="25" aria-pressed="false">25%</button>
+        <button class="fill-button" type="button" data-fill="50" aria-pressed="false">50%</button>
+        <button class="fill-button" type="button" data-fill="75" aria-pressed="false">75%</button>
+        <button class="fill-button" type="button" data-fill="100" aria-pressed="true">100%</button>
       </div>
-      <p class="cuboid-status" aria-live="polite">Length: 2000 pixels | Width: 50 pixels</p>
+      <p class="fill-status" aria-live="polite">Filled: 100%</p>
     </section>
 
     <section>

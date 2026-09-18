@@ -78,25 +78,35 @@ a:hover {
   text-decoration: none;
 }
 
-.cuboid-viewport {
+.square-viewport {
   overflow-x: auto;
   padding: 0.5rem 0;
 }
 
-.cuboid {
-  width: 2000px;
-  height: 50px;
+.square {
+  display: flex;
+  align-items: flex-end;
+  width: 500px;
+  height: 500px;
   border: 2px solid var(--ink);
-  background: var(--accent);
+  background: var(--paper);
 }
 
-.size-controls {
+.square-fill {
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  transition: height 200ms ease;
+}
+
+.fill-controls {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.75rem;
 }
 
-.size-button {
+.fill-button {
   border: 1px solid var(--accent);
   border-radius: 0.25rem;
   padding: 0.5rem 0.75rem;
@@ -107,17 +117,17 @@ a:hover {
   font-weight: 700;
 }
 
-.size-button[aria-pressed="true"] {
+.fill-button[aria-pressed="true"] {
   background: var(--ink);
   border-color: var(--ink);
 }
 
-.size-button:focus-visible {
+.fill-button:focus-visible {
   outline: 3px solid var(--line);
   outline-offset: 3px;
 }
 
-.cuboid-status {
+.fill-status {
   margin: 0.75rem 0 0;
   color: var(--muted);
 }
