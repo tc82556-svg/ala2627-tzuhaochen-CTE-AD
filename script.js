@@ -8,6 +8,21 @@ const responseStatus = document.querySelector('.response-status');
 const goodStuffButton = document.querySelector('.good-stuff-button');
 const watchConfirmation = document.querySelector('.watch-confirmation');
 const watchChoices = document.querySelectorAll('.watch-choice');
+const vehicleArena = document.querySelector('.vehicle-arena');
+const vehicles = [
+  {
+    element: document.querySelector('.vehicle-wasd'),
+    keys: { up: 'w', left: 'a', down: 's', right: 'd' },
+    x: 24,
+    y: 24,
+  },
+  {
+    element: document.querySelector('.vehicle-arrows'),
+    keys: { up: 'ArrowUp', left: 'ArrowLeft', down: 'ArrowDown', right: 'ArrowRight' },
+    x: 170,
+    y: 124,
+  },
+];
 
 fillButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -41,4 +56,34 @@ watchChoices.forEach((choice) => {
 
     window.location.href = 'index.html';
   });
+});
+
+function moveVehicle(vehicle, direction) {
+  const step = 8;
+  const maxX = vehicleArena.clientWidth - vehicle.element.offsetWidth;
+  const maxY = vehicleArena.clientHeight - vehicle.element.offsetHeight;
+
+  if (direction === 'up') vehicle.y -= step;
+  if (direction === 'left') vehicle.x -= step;
+  if (direction === 'down') vehicle.y += step;
+  if (direction === 'right') vehicle.x += step;
+
+  vehicle.x = Math.max(0, Math.min(vehicle.x, maxX));
+  vehicle.y = Math.max(0, Math.min(vehicle.y, maxY));
+  vehicle.element.style.transform = `translate(${vehicle.x}px, ${vehicle.y}px)`;
+}
+
+vehicleArena.addEventListener('keydown', (event) => {
+  const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+  const vehicle = vehicles.find((candidate) => Object.values(candidate.keys).includes(key));
+
+  if (!vehicle) return;
+
+  event.preventDefault();
+  const direction = Object.keys(vehicle.keys).find((name) => vehicle.keys[name] === key);
+  moveVehicle(vehicle, direction);
+});
+
+vehicles.forEach((vehicle) => {
+  vehicle.element.style.transform = `translate(${vehicle.x}px, ${vehicle.y}px)`;
 });

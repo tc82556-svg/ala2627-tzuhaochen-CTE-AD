@@ -228,6 +228,42 @@ textarea {
   outline-offset: 3px;
 }
 
+.vehicle-arena {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border: 2px solid var(--line);
+  background: #1a1a1a;
+  outline: none;
+}
+
+.vehicle-arena:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.vehicle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 76px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--ink);
+  color: #111111;
+  font: 700 0.68rem/1 sans-serif;
+  transition: transform 90ms linear;
+}
+
+.vehicle-wasd {
+  background: #52d273;
+}
+
+.vehicle-arrows {
+  background: #f2a65a;
+}
+
 footer {
   margin-top: 3.5rem;
   padding-top: 1rem;
