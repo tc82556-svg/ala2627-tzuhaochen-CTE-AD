@@ -264,6 +264,43 @@ textarea {
   background: #f2a65a;
 }
 
+.game-viewport {
+  max-width: 100%;
+  overflow: auto;
+  padding: 0.5rem 0;
+}
+
+.game-board {
+  position: relative;
+  box-sizing: content-box;
+  width: 1000px;
+  height: 1000px;
+  overflow: hidden;
+  border: 2px solid #a6a69a;
+  background-color: #f5f3ec;
+  background-image:
+    linear-gradient(to right, #d8d7ce 1px, transparent 1px),
+    linear-gradient(to bottom, #d8d7ce 1px, transparent 1px);
+  background-size: 50px 50px;
+  outline: none;
+}
+
+.game-board:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.game-block {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 50px;
+  height: 80px;
+  border: 2px solid #172b35;
+  background: #e76f51;
+  transition: left 70ms linear, top 70ms linear;
+}
+
 footer {
   margin-top: 3.5rem;
   padding-top: 1rem;
